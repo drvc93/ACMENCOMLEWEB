@@ -32,14 +32,14 @@ namespace ACMENCOMLEWEB
             if (e.CommandName == "EditarSocio")
             {/**/
 
-                ModalPopup1Ext.Show();
+                //ModalPopup1Ext.Show();
                //GVListaSocios.Rebind();
             }
         }
 
         protected void actualizarEstado_Click(object sender, EventArgs e)
         {
-            ModalPopup1Ext.Show();
+            Response.Redirect("Login.aspx");
         }
     }
 }

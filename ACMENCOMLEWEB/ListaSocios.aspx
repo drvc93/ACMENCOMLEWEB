@@ -84,19 +84,6 @@
         <asp:Button runat="server" ID="btnShowPopup"  />
     </div>
 
-    <ajaxToolkit:ModalPopupExtender runat="server" ID="ModalPopup1Ext" TargetControlID="btnShowPopup" PopupControlID="PopEdit1"
-                                    CancelControlID="btnclose" PopupDragHandleControlID="panel1" xmlns:ajaxtoolkit="ajaxcontroltoolkit"   >
-        </ajaxToolkit:ModalPopupExtender>
-    <div id="PopEdit1"  style= "  display:none; background-color:#FFFFCC; width:300px; height:100px;">
-        <asp:Panel Height="50%"  align="center" style ="display:none;"  CssClass="modalBackground" Width="50%"  runat="server" ID="panel1" ViewStateMode="Enabled" EnableViewState="true">
-            <asp:UpdatePanel runat="server" ID="uppanel1">
-                <ContentTemplate>
-                    <div style="width:100%">
-                        <h4 style="color:black;" >asdfdsdsfdss</h4>
-                        <asp:Button Width="200" runat ="server" Text="Cerrar" ID="btnclose" />
-                    </div>
-                </ContentTemplate>
-            </asp:UpdatePanel>
-        </asp:Panel>
-    </div>
+   
+   
 </asp:Content>
