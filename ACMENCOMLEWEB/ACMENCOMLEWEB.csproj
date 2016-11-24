@@ -203,6 +203,7 @@
     <Content Include="Images\orderedList7.png" />
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
+    <Content Include="ListaPagos.aspx" />
     <Content Include="ListaSocios.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
@@ -302,6 +303,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ListaPagos.aspx.cs">
+      <DependentUpon>ListaPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaPagos.aspx.designer.cs">
+      <DependentUpon>ListaPagos.aspx</DependentUpon>
     </Compile>
     <Compile Include="ListaSocios.aspx.cs">
       <DependentUpon>ListaSocios.aspx</DependentUpon>

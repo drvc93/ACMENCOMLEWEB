@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using ClassData;
+using Telerik.Web.UI;
 
 namespace ACMENCOMLEWEB
 {
@@ -31,15 +32,16 @@ namespace ACMENCOMLEWEB
         {
             if (e.CommandName == "EditarSocio")
             {/**/
-
-                //ModalPopup1Ext.Show();
-               //GVListaSocios.Rebind();
+                GridDataItem it = e.Item as GridDataItem;
+                string tex = it["Dni"].Text;
+                tex = tex.ToUpper();
+              
             }
         }
 
         protected void actualizarEstado_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Login.aspx");
+           // Response.Redirect("Login.aspx");
         }
     }
 }
