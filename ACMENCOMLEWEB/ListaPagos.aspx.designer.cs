@@ -31,13 +31,13 @@ namespace ACMENCOMLEWEB {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// Control GVListaSocios.
+        /// Control GVListaPagos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadGrid GVListaSocios;
+        protected global::Telerik.Web.UI.RadGrid GVListaPagos;
         
         /// <summary>
         /// Control btnShowPopup.

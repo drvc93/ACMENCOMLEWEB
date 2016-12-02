@@ -2,3 +2,4 @@ c:\users\dvillanueva\documents\visual studio 2012\Projects\ACMENCOMLEWEB\ClassDa
 c:\users\dvillanueva\documents\visual studio 2012\Projects\ACMENCOMLEWEB\ClassData\bin\Debug\ClassData.pdb
 c:\users\dvillanueva\documents\visual studio 2012\Projects\ACMENCOMLEWEB\ClassData\obj\Debug\ClassData.dll
 c:\users\dvillanueva\documents\visual studio 2012\Projects\ACMENCOMLEWEB\ClassData\obj\Debug\ClassData.pdb
+C:\Users\dvillanueva\documents\visual studio 2012\Projects\ACMENCOMLEWEB\ClassData\obj\Debug\ClassData.csprojResolveAssemblyReference.cache

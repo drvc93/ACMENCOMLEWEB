@@ -34,34 +34,40 @@
                 <div id="content-gen">
 
                     <div style="margin:0 auto; width:90%;margin-top:5%;">
-                        <telerik:RadGrid RenderMode="Lightweight" ID="GVListaSocios"  AllowSorting="false" AllowPaging="True" runat="server" OnItemCommand="GVListaSocios_ItemCommand"   >
+                        <telerik:RadGrid RenderMode="Lightweight" ID="GVListaPagos"  AllowSorting="false" AllowPaging="True" runat="server" OnItemCommand="GVListaPagos_ItemCommand"   >
                             <PagerStyle Mode="NextPrevAndNumeric"></PagerStyle>
                             <MasterTableView Width="100%"  ViewStateMode="Enabled"
                                              AutoGenerateColumns="false">
 
                                 <Columns>
-                                    <telerik:GridBoundColumn DataField="Dni"  HeaderText="DNI">
+                                    <telerik:GridBoundColumn DataField="codPago"  HeaderText="Codigo">
                                     </telerik:GridBoundColumn>
 
                                     <telerik:GridBoundColumn DataField="Nombres" HeaderText="Nombres">
                                     </telerik:GridBoundColumn>
-                                    <telerik:GridBoundColumn DataField="ApellidoPat" HeaderText="Apellido Pat.">
+                                    <telerik:GridBoundColumn DataField="Seccion" HeaderText="Seccion">
                                     </telerik:GridBoundColumn>
-                                    <telerik:GridBoundColumn DataField="ApellidoMat" HeaderText="Apellido Mat.">
+                                    <telerik:GridBoundColumn DataField="Puesto" HeaderText="Puesto">
                                     </telerik:GridBoundColumn>
-                                    <telerik:GridBoundColumn DataField="Celular" HeaderText="Celular">
+
+                                    <telerik:GridBoundColumn DataField="Concepto" HeaderText="Concepto">
                                     </telerik:GridBoundColumn>
-                                    <telerik:GridBoundColumn DataField="FechaRegistro" HeaderText="FechaRegistro">
+
+                                    <telerik:GridBoundColumn DataField="Banco" HeaderText="Banco">
                                     </telerik:GridBoundColumn>
+
+                                    <telerik:GridBoundColumn DataField="Monto" HeaderText="Monto">
+                                    </telerik:GridBoundColumn>
+                                    <telerik:GridDateTimeColumn DataField="FechaPago" HeaderText="FechaPago"></telerik:GridDateTimeColumn>
+                                   
                                     <telerik:GridBoundColumn DataField="Estado" HeaderText="Estado">
                                     </telerik:GridBoundColumn>
-                                    <telerik:GridBoundColumn DataField="Correo" HeaderText="Correo">
-                                    </telerik:GridBoundColumn>
+                             
                                     <telerik:GridTemplateColumn  UniqueName="TemplateActualizarEstado" ShowSortIcon="true">
                                         <ItemTemplate>
-                                            <asp:LinkButton ID="actualizarEstado"   runat="server" AlternateText="ae" CausesValidation="False"
-                                                            CommandArgument="Dni"  CommandName="EditarSocio"
-                                                            Text="Editar" ToolTip="Editar">
+                                            <asp:LinkButton ID="ConfirmPago"   runat="server" AlternateText="ae" CausesValidation="False"
+                                                            CommandArgument="Dni"  CommandName="ConfirmarPago"
+                                                            Text="Confirmar" Enabled='<%#  Eval("Enabledbtn") %>' ToolTip="Editar">
 
                                             </asp:LinkButton>
                                         </ItemTemplate>

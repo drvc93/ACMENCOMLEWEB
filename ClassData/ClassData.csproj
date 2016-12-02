@@ -42,6 +42,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Constantes.cs" />
+    <Compile Include="CPagos.cs" />
     <Compile Include="CSocios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
