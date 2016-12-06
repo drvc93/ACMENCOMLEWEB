@@ -32,5 +32,11 @@ namespace ClassData
             return dt;
 
         }
+
+      /*  public  string  UpdatePagoConfrimado (int codpago , string DniSocio)
+        {
+            
+           string result 
+        }*/
     }
 }

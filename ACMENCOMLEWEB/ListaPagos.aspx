@@ -4,6 +4,25 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+    <%--  <telerik:RadScriptManager runat="server" ID="RadScriptManager1" />--%>
+
+  
+
+    <script type="text/javascript">
+        function Confirm() {
+            var confirm_value = document.createElement("INPUT");
+            confirm_value.type = "hidden";
+            confirm_value.name = "confirm_value";
+            if (confirm("¿Desea confirmar el pago ?")) {
+                confirm_value.value = "Si";
+            } else {
+                confirm_value.value = "No";
+            }
+            document.forms[0].appendChild(confirm_value);
+        }
+    </script>
+
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
 
@@ -29,18 +48,21 @@
                 height: 140px;
                 }
             </style>
-
+            <div runat="server" id="divcorrect" class="alert alert-success" style="margin-top:10px" >
+                <strong>Success!</strong> You should
+                <a href="#" class="alert-link">read this message</a>.
+            </div>
             <div id="content">
                 <div id="content-gen">
 
                     <div style="margin:0 auto; width:90%;margin-top:5%;">
-                        <telerik:RadGrid RenderMode="Lightweight" ID="GVListaPagos"  AllowSorting="false" AllowPaging="True" runat="server" OnItemCommand="GVListaPagos_ItemCommand"   >
+                        <telerik:RadGrid  RenderMode="Lightweight" ID="GVListaPagos"  OnNeedDataSource="GVListaPagos_NeedDataSource" AllowSorting="false" AllowPaging="True" runat="server" OnItemCommand="GVListaPagos_ItemCommand"   >
                             <PagerStyle Mode="NextPrevAndNumeric"></PagerStyle>
                             <MasterTableView Width="100%"  ViewStateMode="Enabled"
                                              AutoGenerateColumns="false">
 
                                 <Columns>
-                                    <telerik:GridBoundColumn DataField="codPago"  HeaderText="Codigo">
+                                    <telerik:GridBoundColumn DataField="codPago"  UniqueName="codPago" HeaderText="Codigo">
                                     </telerik:GridBoundColumn>
 
                                     <telerik:GridBoundColumn DataField="Nombres" HeaderText="Nombres">
@@ -50,24 +72,24 @@
                                     <telerik:GridBoundColumn DataField="Puesto" HeaderText="Puesto">
                                     </telerik:GridBoundColumn>
 
-                                    <telerik:GridBoundColumn DataField="Concepto" HeaderText="Concepto">
+                                    <telerik:GridBoundColumn DataField="Concepto" HeaderText="Concepto" SortExpression="Concepto">
                                     </telerik:GridBoundColumn>
 
-                                    <telerik:GridBoundColumn DataField="Banco" HeaderText="Banco">
+                                    <telerik:GridBoundColumn DataField="Banco" SortExpression="Banco" HeaderText="Banco">
                                     </telerik:GridBoundColumn>
 
                                     <telerik:GridBoundColumn DataField="Monto" HeaderText="Monto">
                                     </telerik:GridBoundColumn>
-                                    <telerik:GridDateTimeColumn DataField="FechaPago" HeaderText="FechaPago"></telerik:GridDateTimeColumn>
-                                   
+                                    <telerik:GridDateTimeColumn SortExpression="FechaPago"  DataField="FechaPago" HeaderText="FechaPago"></telerik:GridDateTimeColumn>
+
                                     <telerik:GridBoundColumn DataField="Estado" HeaderText="Estado">
                                     </telerik:GridBoundColumn>
-                             
+
                                     <telerik:GridTemplateColumn  UniqueName="TemplateActualizarEstado" ShowSortIcon="true">
                                         <ItemTemplate>
                                             <asp:LinkButton ID="ConfirmPago"   runat="server" AlternateText="ae" CausesValidation="False"
                                                             CommandArgument="Dni"  CommandName="ConfirmarPago"
-                                                            Text="Confirmar" Enabled='<%#  Eval("Enabledbtn") %>' ToolTip="Editar">
+                                                            Text="Confirmar" Enabled='<%#  Eval("Enabledbtn") %>' OnClientClick="Confirm()"  OnClick="ConfirmPago_Click"  Visible ='<%#  Eval("Enabledbtn") %>' ToolTip ="Editar">
 
                                             </asp:LinkButton>
                                         </ItemTemplate>
