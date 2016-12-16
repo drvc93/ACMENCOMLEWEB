@@ -48,9 +48,9 @@
                 height: 140px;
                 }
             </style>
-            <div runat="server" id="divcorrect" class="alert alert-success" style="margin-top:10px" >
-                <strong>Success!</strong> You should
-                <a href="#" class="alert-link">read this message</a>.
+            <div runat="server" id="divcorrect" visible="false" class="alert alert-success" style="margin-top:10px" >
+                <strong>Exito!</strong> Se realizó la operación correctamente
+                <a href="#" class="alert-link"></a>.
             </div>
             <div id="content">
                 <div id="content-gen">
