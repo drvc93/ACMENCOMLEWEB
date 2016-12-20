@@ -6,13 +6,15 @@
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
     <%--  <telerik:RadScriptManager runat="server" ID="RadScriptManager1" />--%>
-    
+
+  
+
     <script type="text/javascript">
-        function Confirm(texto) {
+        function Confirm() {
             var confirm_value = document.createElement("INPUT");
             confirm_value.type = "hidden";
             confirm_value.name = "confirm_value";
-            if (confirm("¿Desea confirmar el pago Nro: "+texto+" ?")) {
+            if (confirm("¿Desea confirmar el pago ?")) {
                 confirm_value.value = "Si";
             } else {
                 confirm_value.value = "No";
@@ -46,7 +48,10 @@
                 height: 140px;
                 }
             </style>
-
+            <div runat="server" id="divcorrect" visible="false" class="alert alert-success" style="margin-top:10px" >
+                <strong>Exito!</strong> Se realizó la operación correctamente
+                <a href="#" class="alert-link"></a>.
+            </div>
             <div id="content">
                 <div id="content-gen">
 
@@ -57,7 +62,7 @@
                                              AutoGenerateColumns="false">
 
                                 <Columns>
-                                    <telerik:GridBoundColumn DataField="codPago"  HeaderText="Codigo">
+                                    <telerik:GridBoundColumn DataField="codPago"  UniqueName="codPago" HeaderText="Codigo">
                                     </telerik:GridBoundColumn>
 
                                     <telerik:GridBoundColumn DataField="Nombres" HeaderText="Nombres">
@@ -84,7 +89,7 @@
                                         <ItemTemplate>
                                             <asp:LinkButton ID="ConfirmPago"   runat="server" AlternateText="ae" CausesValidation="False"
                                                             CommandArgument="Dni"  CommandName="ConfirmarPago"
-                                                            Text="Confirmar" Enabled='<%#  Eval("Enabledbtn") %>'  OnClick="ConfirmPago_Click"  Visible ='<%#  Eval("Enabledbtn") %>' ToolTip ="Editar">
+                                                            Text="Confirmar" Enabled='<%#  Eval("Enabledbtn") %>' OnClientClick="Confirm()"  OnClick="ConfirmPago_Click"  Visible ='<%#  Eval("Enabledbtn") %>' ToolTip ="Editar">
 
                                             </asp:LinkButton>
                                         </ItemTemplate>

@@ -62,14 +62,23 @@ namespace ACMENCOMLEWEB
             LinkButton btn = (LinkButton)sender;
             GridDataItem item = (GridDataItem)btn.NamingContainer;
             TableCell cell = (TableCell)item["codPago"];
-            string tex = cell.Text;
-              //tex = Convert.ToString( Session["codPago"]);
-             //ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "Script", "Confirm('" + tex + "');", true);
-            string confirmValue = Request.Form["confirm_value"];
+            string texcodpago = cell.Text;
+            string dniSocio = Session["dniUser"].ToString();
 
+            CPagos c = new CPagos();
+            string res = c.UpdatePagoConfrimado(Convert.ToInt32(texcodpago), dniSocio);
+
+
+
+            string confirmValue = Request.Form["confirm_value"];
+            confirmValue = confirmValue.Substring(confirmValue.Length - 2, 2);
             if (confirmValue == "Si")
             {/**/
-             divcorrect.Visible = true;
+                if (res == "OK")
+                {
+                    divcorrect.Visible = true;
+                    LoadPagos();
+                }
             }
         }
 

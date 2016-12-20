@@ -33,10 +33,39 @@ namespace ClassData
 
         }
 
-      /*  public  string  UpdatePagoConfrimado (int codpago , string DniSocio)
+       public  string  UpdatePagoConfrimado (int codpago , string DniSocio)
         {
-            
-           string result 
-        }*/
+            SqlConnection cn = con.conexion();
+            string result  = "";
+            SqlCommand sqlcmd = new SqlCommand();
+            sqlcmd.Connection = cn;
+            try
+            {
+                sqlcmd.CommandText = "SPU_AC_CONFIRMARPAGO";
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                sqlcmd.Parameters.AddWithValue("@DniSocio", DniSocio);
+                sqlcmd.Parameters.AddWithValue("@CodPago", codpago);
+                
+                int rowsafect =sqlcmd.ExecuteNonQuery();
+                if ( rowsafect >0)  {
+
+                    result = "OK";
+                    }
+            }
+
+
+
+            catch (SqlException ex)
+            {
+
+              
+                result = ex.Message;
+
+
+            }
+
+            return result;
+        }
     }
 }
