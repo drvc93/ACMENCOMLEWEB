@@ -190,6 +190,13 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="CssStyles\css\bootstrap.css" />
+    <Content Include="CssStyles\css\bootstrap.min.css" />
+    <Content Include="CssStyles\css\thumbnail-gallery.css" />
+    <Content Include="CssStyles\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="CssStyles\js\bootstrap.js" />
+    <Content Include="CssStyles\js\bootstrap.min.js" />
+    <Content Include="CssStyles\js\jquery.js" />
     <Content Include="Imagenes.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
@@ -204,10 +211,15 @@
     <Content Include="Images\orderedList7.png" />
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
+    <Content Include="Imgs.aspx" />
     <Content Include="ListaPagos.aspx" />
     <Content Include="ListaSocios.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
+    <Content Include="CssStyles\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="CssStyles\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="CssStyles\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="CssStyles\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
@@ -312,6 +324,13 @@
     </Compile>
     <Compile Include="Imagenes.aspx.designer.cs">
       <DependentUpon>Imagenes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Imgs.aspx.cs">
+      <DependentUpon>Imgs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Imgs.aspx.designer.cs">
+      <DependentUpon>Imgs.aspx</DependentUpon>
     </Compile>
     <Compile Include="ListaPagos.aspx.cs">
       <DependentUpon>ListaPagos.aspx</DependentUpon>

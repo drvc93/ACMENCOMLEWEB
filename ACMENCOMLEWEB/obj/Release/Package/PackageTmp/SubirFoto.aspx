@@ -15,6 +15,7 @@
             <hr />
             <asp:Label ID="lblMessage" runat="server" />
            <telerik:RadLinkButton runat="server" NavigateUrl="~/Imagenes.aspx" Text="Lista Imagenes" ></telerik:RadLinkButton>
+             <telerik:RadLinkButton ID="RadLinkButton1" runat="server" NavigateUrl="~/Imgs.aspx" Text="Lista Imagenes 2" ></telerik:RadLinkButton>
         </ContentTemplate>
     </asp:UpdatePanel>
 
