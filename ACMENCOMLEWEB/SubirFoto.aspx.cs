@@ -20,35 +20,20 @@ namespace ACMENCOMLEWEB
 
         protected void FTPUpload(object sender, EventArgs e)
         {
-            //FTP Server URL.
-            string ftpurl = "ftp://ftp.Smarterasp.net/";
+            if (FileUpload1.HasFile)
+            {
+                string fileName = Path.GetFileName(FileUpload1.PostedFile.FileName);
+                FileUpload1.PostedFile.SaveAs(Server.MapPath("~/imgs/") + fileName);
 
-            //FTP Folder name. Leave blank if you want to upload to root folder.
-            string ftpFolder = "Imgs/";
-
-            byte[] fileBytes = null;
-
-            //Read the FileName and convert it to Byte array.
-            string source = FileUpload1.FileName;
-            string fileName = Path.GetFileName(FileUpload1.FileName);
-
-            string ftpfullpath = ftpurl;
-            FtpWebRequest ftp = (FtpWebRequest)FtpWebRequest.Create(ftpfullpath);
-            ftp.Credentials = new NetworkCredential("drvc2110-001", "danivicr093");
-
-            ftp.KeepAlive = true;
-            ftp.UseBinary = true;
-            ftp.Method = WebRequestMethods.Ftp.UploadFile;
-
-            FileStream fs = File.OpenRead(fileName);
-            byte[] buffer = new byte[fs.Length];
-            fs.Read(buffer, 0, buffer.Length);
-            fs.Close();
-
-            Stream ftpstream = ftp.GetRequestStream();
-            ftpstream.Write(buffer, 0, buffer.Length);
-            ftpstream.Close();
-
+                lblMessage.Text = "Image Uploaded";
+                lblMessage.ForeColor = System.Drawing.Color.ForestGreen;
+            }
+            else
+            {
+                lblMessage.Text = "Please Select your file";
+                lblMessage.ForeColor = System.Drawing.Color.Red;
+            }  
+          
 
 
           /*  using (StreamReader fileStream = new StreamReader( FileUpload1.PostedFile.InputStream))

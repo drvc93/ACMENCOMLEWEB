@@ -190,6 +190,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Imagenes.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\heroAccent.png" />
@@ -305,6 +306,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Imagenes.aspx.cs">
+      <DependentUpon>Imagenes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Imagenes.aspx.designer.cs">
+      <DependentUpon>Imagenes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ListaPagos.aspx.cs">
       <DependentUpon>ListaPagos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -344,6 +352,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="imgs\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
