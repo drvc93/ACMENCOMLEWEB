@@ -3,3 +3,13 @@ c:\users\dvillanueva\documents\visual studio 2012\Projects\ACMENCOMLEWEB\ClassDa
 c:\users\dvillanueva\documents\visual studio 2012\Projects\ACMENCOMLEWEB\ClassData\obj\Debug\ClassData.dll
 c:\users\dvillanueva\documents\visual studio 2012\Projects\ACMENCOMLEWEB\ClassData\obj\Debug\ClassData.pdb
 C:\Users\dvillanueva\documents\visual studio 2012\Projects\ACMENCOMLEWEB\ClassData\obj\Debug\ClassData.csprojResolveAssemblyReference.cache
+D:\ACMENCOMLEWEB\ClassData\bin\Debug\ClassData.dll
+D:\ACMENCOMLEWEB\ClassData\bin\Debug\ClassData.pdb
+D:\ACMENCOMLEWEB\ClassData\obj\Debug\ClassData.csprojResolveAssemblyReference.cache
+D:\ACMENCOMLEWEB\ClassData\obj\Debug\ClassData.dll
+D:\ACMENCOMLEWEB\ClassData\obj\Debug\ClassData.pdb
+E:\APPS 2017\ACMENCONLE\Web\ACMENCOMLEWEB\ClassData\bin\Debug\ClassData.dll
+E:\APPS 2017\ACMENCONLE\Web\ACMENCOMLEWEB\ClassData\bin\Debug\ClassData.pdb
+E:\APPS 2017\ACMENCONLE\Web\ACMENCOMLEWEB\ClassData\obj\Debug\ClassData.csprojResolveAssemblyReference.cache
+E:\APPS 2017\ACMENCONLE\Web\ACMENCOMLEWEB\ClassData\obj\Debug\ClassData.dll
+E:\APPS 2017\ACMENCONLE\Web\ACMENCOMLEWEB\ClassData\obj\Debug\ClassData.pdb

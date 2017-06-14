@@ -90,9 +90,9 @@
                     
                   </li>
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a  href="Encuestas.aspx" >
                         
-                          <span>Menu4</span>
+                          <span>Encuestas</span>
                       </a>
                       
                   </li>

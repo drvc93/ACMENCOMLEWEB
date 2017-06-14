@@ -2,3 +2,12 @@ c:\users\dvillanueva\documents\visual studio 2012\Projects\ACMENCOMLEWEB\ClassDa
 c:\users\dvillanueva\documents\visual studio 2012\Projects\ACMENCOMLEWEB\ClassData\bin\Release\ClassData.pdb
 c:\users\dvillanueva\documents\visual studio 2012\Projects\ACMENCOMLEWEB\ClassData\obj\Release\ClassData.dll
 c:\users\dvillanueva\documents\visual studio 2012\Projects\ACMENCOMLEWEB\ClassData\obj\Release\ClassData.pdb
+D:\ACMENCOMLEWEB\ClassData\bin\Release\ClassData.dll
+D:\ACMENCOMLEWEB\ClassData\bin\Release\ClassData.pdb
+D:\ACMENCOMLEWEB\ClassData\obj\Release\ClassData.dll
+D:\ACMENCOMLEWEB\ClassData\obj\Release\ClassData.pdb
+E:\APPS 2017\ACMENCONLE\Web\ACMENCOMLEWEB\ClassData\bin\Release\ClassData.dll
+E:\APPS 2017\ACMENCONLE\Web\ACMENCOMLEWEB\ClassData\bin\Release\ClassData.pdb
+E:\APPS 2017\ACMENCONLE\Web\ACMENCOMLEWEB\ClassData\obj\Release\ClassData.csprojResolveAssemblyReference.cache
+E:\APPS 2017\ACMENCONLE\Web\ACMENCOMLEWEB\ClassData\obj\Release\ClassData.dll
+E:\APPS 2017\ACMENCONLE\Web\ACMENCOMLEWEB\ClassData\obj\Release\ClassData.pdb

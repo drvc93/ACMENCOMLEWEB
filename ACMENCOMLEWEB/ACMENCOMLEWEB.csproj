@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -197,6 +198,7 @@
     <Content Include="CssStyles\js\bootstrap.js" />
     <Content Include="CssStyles\js\bootstrap.min.js" />
     <Content Include="CssStyles\js\jquery.js" />
+    <Content Include="Encuestas.aspx" />
     <Content Include="Imagenes.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
@@ -220,7 +222,10 @@
     <Content Include="CssStyles\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="CssStyles\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="CssStyles\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Properties\PublishProfiles\Default Settings %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\Default Settings %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
+    <None Include="Properties\PublishProfiles\WEB DEPLOYENT.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -314,6 +319,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Encuestas.aspx.cs">
+      <DependentUpon>Encuestas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Encuestas.aspx.designer.cs">
+      <DependentUpon>Encuestas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CEncuesta.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Constantes.cs" />

@@ -1,8 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ListaSocios.aspx.cs" Inherits="ACMENCOMLEWEB.ListaSocios" %>
-
-<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Encuestas.aspx.cs" Inherits="ACMENCOMLEWEB.Encuestas" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+      <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <asp:UpdatePanel runat="server">
         <ContentTemplate>
@@ -34,34 +32,30 @@
                 <div id="content-gen">
 
                     <div style="margin:0 auto; width:90%;margin-top:5%;">
-                        <telerik:RadGrid RenderMode="Lightweight"   MasterTableView-AllowFilteringByColumn="true"   ID="GVListaSocios"  AllowSorting="false" AllowPaging="True" runat="server" OnItemCommand="GVListaSocios_ItemCommand" OnNeedDataSource="GVListaSocios_NeedDataSource"   >
+                        <telerik:RadGrid RenderMode="Lightweight"    ID="gvListaEncuestas"  AllowSorting="false" AllowPaging="True" runat="server"   >
                             <PagerStyle Mode="NextPrevAndNumeric"  ></PagerStyle>
                             <MasterTableView Width="100%"  ViewStateMode="Enabled"
                                              AutoGenerateColumns="false">
 
                                 <Columns>
-                                    <telerik:GridBoundColumn DataField="Dni"  HeaderText="DNI"   AndCurrentFilterFunction="Contains" AllowFiltering ="true">
+                                    <telerik:GridBoundColumn DataField="codEncuesta"  HeaderText="Codigo"  >
                                     </telerik:GridBoundColumn>
 
-                                    <telerik:GridBoundColumn DataField="Nombres" HeaderText="Nombres"  AndCurrentFilterFunction="Contains" AllowFiltering ="true" >
+                                    <telerik:GridBoundColumn DataField="Descrip" HeaderText="Descripcion" >
                                     </telerik:GridBoundColumn>
-                                    <telerik:GridBoundColumn DataField="ApellidoPat"  HeaderText="Apellido Pat."  AndCurrentFilterFunction="Contains" AllowFiltering ="true" >
+                                    <telerik:GridBoundColumn DataField="FechaReg"  HeaderText="Fecha"  >
                                     </telerik:GridBoundColumn>
-                                    <telerik:GridBoundColumn DataField="ApellidoMat" HeaderText="Apellido Mat.">
-                                    </telerik:GridBoundColumn>
-                                    <telerik:GridBoundColumn DataField="Celular" HeaderText="Celular">
-                                    </telerik:GridBoundColumn>
-                                    <telerik:GridBoundColumn DataField="FechaRegistro" HeaderText="FechaRegistro"  >
+                                     <telerik:GridBoundColumn DataField="UserReg"  HeaderText="Usuario Registro"  >
                                     </telerik:GridBoundColumn>
                                     <telerik:GridBoundColumn DataField="Estado" HeaderText="Estado">
                                     </telerik:GridBoundColumn>
-                                    <telerik:GridBoundColumn DataField="Correo" HeaderText="Correo">
-                                    </telerik:GridBoundColumn>
+                                    
+                                 
                                     <telerik:GridTemplateColumn  UniqueName="TemplateActualizarEstado" ShowSortIcon="true">
                                         <ItemTemplate>
                                             <asp:LinkButton ID="actualizarEstado"   runat="server" AlternateText="ae" CausesValidation="False"
-                                                            CommandArgument="Dni"  CommandName="EditarSocio"
-                                                            Text="Editar" ToolTip="Editar">
+                                                            CommandArgument="codEncuesta"  CommandName="VerDetalle"
+                                                            Text="Ver detalle" ToolTip="Ver Encuesta">
 
                                             </asp:LinkButton>
                                         </ItemTemplate>

@@ -25,13 +25,15 @@ namespace ACMENCOMLEWEB
                 string fileName = Path.GetFileName(FileUpload1.PostedFile.FileName);
                 FileUpload1.PostedFile.SaveAs(Server.MapPath("~/imgs/") + fileName);
 
-                lblMessage.Text = "Image Uploaded";
+                lblMessage.Text = "Imagen cargada";
                 lblMessage.ForeColor = System.Drawing.Color.ForestGreen;
+                lblMessage.Font.Bold = true;
             }
             else
             {
-                lblMessage.Text = "Please Select your file";
+                lblMessage.Text = "Seleccione una imagen";
                 lblMessage.ForeColor = System.Drawing.Color.Red;
+                lblMessage.Font.Bold = true;
             }  
           
 

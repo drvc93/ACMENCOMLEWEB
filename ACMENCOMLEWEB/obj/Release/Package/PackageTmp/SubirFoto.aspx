@@ -9,13 +9,20 @@
             <asp:PostBackTrigger  ControlID="Button1"/>
         </Triggers>
         <ContentTemplate>
+            <div style="margin-left:15px;">
+                <asp:FileUpload ID="FileUpload1" runat="server" style="color:black;"  />
+                <br />
 
-            <asp:FileUpload ID="FileUpload1" runat="server" />
-            <asp:Button ID="Button1" Text="Upload to FTP" runat="server" OnClick="FTPUpload" />
-            <hr />
-            <asp:Label ID="lblMessage" runat="server" />
-           <telerik:RadLinkButton runat="server" NavigateUrl="~/Imagenes.aspx" Text="Lista Imagenes" ></telerik:RadLinkButton>
-             <telerik:RadLinkButton ID="RadLinkButton1" runat="server" NavigateUrl="~/Imgs.aspx" Text="Lista Imagenes 2" ></telerik:RadLinkButton>
+                <asp:Button ID="Button1" Text="Cargar Foto" ForeColor="Black" style="color:black;" runat="server" OnClick="FTPUpload" />
+                <br />
+                 <br />
+
+                <asp:Label ID="lblMessage" runat="server" />
+                <br />
+                 <br />
+
+                <telerik:RadLinkButton ID="RadLinkButton1" runat="server" NavigateUrl="~/Imgs.aspx" Text="Lista Imagenes" ></telerik:RadLinkButton>
+            </div>
         </ContentTemplate>
     </asp:UpdatePanel>
 

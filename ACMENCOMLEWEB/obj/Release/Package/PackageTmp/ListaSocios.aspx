@@ -34,24 +34,24 @@
                 <div id="content-gen">
 
                     <div style="margin:0 auto; width:90%;margin-top:5%;">
-                        <telerik:RadGrid RenderMode="Lightweight" ID="GVListaSocios"  AllowSorting="false" AllowPaging="True" runat="server" OnItemCommand="GVListaSocios_ItemCommand"   >
-                            <PagerStyle Mode="NextPrevAndNumeric"></PagerStyle>
+                        <telerik:RadGrid RenderMode="Lightweight"   MasterTableView-AllowFilteringByColumn="true"   ID="GVListaSocios"  AllowSorting="false" AllowPaging="True" runat="server" OnItemCommand="GVListaSocios_ItemCommand" OnNeedDataSource="GVListaSocios_NeedDataSource"   >
+                            <PagerStyle Mode="NextPrevAndNumeric"  ></PagerStyle>
                             <MasterTableView Width="100%"  ViewStateMode="Enabled"
                                              AutoGenerateColumns="false">
 
                                 <Columns>
-                                    <telerik:GridBoundColumn DataField="Dni"  HeaderText="DNI">
+                                    <telerik:GridBoundColumn DataField="Dni"  HeaderText="DNI"   AndCurrentFilterFunction="Contains" AllowFiltering ="true">
                                     </telerik:GridBoundColumn>
 
-                                    <telerik:GridBoundColumn DataField="Nombres" HeaderText="Nombres">
+                                    <telerik:GridBoundColumn DataField="Nombres" HeaderText="Nombres"  AndCurrentFilterFunction="Contains" AllowFiltering ="true" >
                                     </telerik:GridBoundColumn>
-                                    <telerik:GridBoundColumn DataField="ApellidoPat" HeaderText="Apellido Pat.">
+                                    <telerik:GridBoundColumn DataField="ApellidoPat"  HeaderText="Apellido Pat."  AndCurrentFilterFunction="Contains" AllowFiltering ="true" >
                                     </telerik:GridBoundColumn>
                                     <telerik:GridBoundColumn DataField="ApellidoMat" HeaderText="Apellido Mat.">
                                     </telerik:GridBoundColumn>
                                     <telerik:GridBoundColumn DataField="Celular" HeaderText="Celular">
                                     </telerik:GridBoundColumn>
-                                    <telerik:GridBoundColumn DataField="FechaRegistro" HeaderText="FechaRegistro">
+                                    <telerik:GridBoundColumn DataField="FechaRegistro" HeaderText="FechaRegistro"  >
                                     </telerik:GridBoundColumn>
                                     <telerik:GridBoundColumn DataField="Estado" HeaderText="Estado">
                                     </telerik:GridBoundColumn>

@@ -26,6 +26,7 @@ namespace ACMENCOMLEWEB
             CSocios c = new CSocios();
             GVListaSocios.DataSource = c.ListSocios();
             GVListaSocios.DataBind();
+           
         }
 
         protected void GVListaSocios_ItemCommand(object sender, Telerik.Web.UI.GridCommandEventArgs e)
@@ -42,6 +43,13 @@ namespace ACMENCOMLEWEB
         protected void actualizarEstado_Click(object sender, EventArgs e)
         {
            // Response.Redirect("Login.aspx");
+        }
+
+        protected void GVListaSocios_NeedDataSource(object sender, GridNeedDataSourceEventArgs e)
+        {
+            CSocios c = new CSocios();
+            GVListaSocios.DataSource = c.ListSocios();
+
         }
     }
 }
